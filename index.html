@@ -1,11 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Xlombard</title>
+    <link rel="stylesheet" href="./src/output.css" />
+  </head>
+  <body>
+    <header class="w-full py-4 border-b">
+      <div
+        class="max-w-[1200px] mx-auto px-4 flex items-center justify-between"
+      >
+        <a href="#" class="flex items-center">
+          <img src="./img/logo.svg" alt="XLombard Logo" class="h-10" />
+        </a>
+
+        <nav class="hidden md:flex gap-8">
+          <a href="#" class="text-black text-sm hover:text-blue-600 transition"
+            >О программе</a
+          >
+          <a href="#" class="text-black text-sm hover:text-blue-600 transition"
+            >Тарифы и цены</a
+          >
+          <a href="#" class="text-black text-sm hover:text-blue-600 transition"
+            >Контакты</a
+          >
+        </nav>
+
+        <div class="hidden md:flex items-center gap-6">
+          <a
+            href="#"
+            class="border-2 border-blue-600 text-blue-600 px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-600 hover:text-white transition transform hover:-translate-y-1 cursor-pointer"
+          >
+            Попробовать бесплатно
+          </a>
+          <div class="text-right">
+            <p class="text-xs text-blue-600">Заказать обратный звонок</p>
+            <a
+              href="tel:+74956779551"
+              class="text-base font-bold text-black hover:underline transition"
+            >
+              +7 (495) 677-95-51
+            </a>
+          </div>
+        </div>
+
+        <button id="menuBtn" class="md:hidden text-black focus:outline-none">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-7 w-7"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <div class="md:hidden text-center mt-3 px-4 phone-mobile">
+        <p class="text-xs text-blue-600">Заказать обратный звонок</p>
+        <a
+          href="tel:+74956779551"
+          class="text-base font-bold text-black hover:underline transition block"
+        >
+          +7 (495) 677-95-51
+        </a>
+      </div>
+
+      <div
+        id="mobileMenu"
+        class="hidden md:hidden flex flex-col gap-4 px-4 pb-4 bg-white border-t"
+      >
+        <a href="#" class="text-black text-sm hover:text-blue-600 transition"
+          >О программе</a
+        >
+        <a href="#" class="text-black text-sm hover:text-blue-600 transition"
+          >Тарифы и цены</a
+        >
+        <a href="#" class="text-black text-sm hover:text-blue-600 transition"
+          >Контакты</a
+        >
+
+        <a
+          href="#"
+          class="border-2 border-blue-600 text-blue-600 px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-600 hover:text-white transition cursor-pointer text-center"
+        >
+          Попробовать бесплатно
+        </a>
+      </div>
+    </header>
+
+    <script src="./main.js">
+      const menuBtn = document.getElementById("menuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    </script>
+  </body>
 </html>
